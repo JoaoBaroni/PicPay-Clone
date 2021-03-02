@@ -1,0 +1,4 @@
+enum TransactionType{
+  ttDebit,
+  ttCredit
+}

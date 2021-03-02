@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:picpay_clone/components/suggest_item.dart';
 import 'package:picpay_clone/utils/constants.dart';
 import '../components/custom_tab.dart';
+import '../components/activity_card.dart';
 
 class WalletPage extends StatefulWidget {
   @override
@@ -42,62 +43,19 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
           child: Container(
             child: TabBarView(
               children: [
-                Container(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                SingleChildScrollView(
+                  child: Container(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: double.infinity,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                          CircleAvatar(backgroundColor: Colors.blueAccent, maxRadius: 25,)
-                                        ],),
-                                      ),
-                                    ),
-                                    Expanded(child: Container(child: Row(
-                                      children: [
-                                        Text('Teste')
-                                      ],
-                                    ),))
-                                  ],
-                                ),
-                                Expanded(child: Container(),),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    children: [
-                                      Text('Gastou X')
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black12,
-                                  spreadRadius: 1,
-                                  blurRadius: 4
-                                )
-                              ],
-                              color: Colors.white,
-                            ),
-                            height: 125,
-                          ),
+                          ActivityCard(),
+                          ActivityCard(),
+                          ActivityCard(),
+                          ActivityCard(),
                         ],
+                      ),
                     ),
                   ),
                 ),
