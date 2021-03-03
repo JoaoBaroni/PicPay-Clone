@@ -59,7 +59,19 @@ class _WalletPageState extends State<WalletPage> with TickerProviderStateMixin {
                     ),
                   ),
                 ),
-                Container(child: Text('First one')),
+                SingleChildScrollView(
+                  child: Container(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ActivityCard(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ],
               controller: _tabController,
             ),

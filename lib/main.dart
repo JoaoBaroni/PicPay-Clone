@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:picpay_clone/screens/main_page.dart';
+import 'package:picpay_clone/screens/splash_page.dart';
+import 'package:picpay_clone/utils/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,13 +15,14 @@ class MyApp extends StatelessWidget {
       title: 'PicPay',
       theme: ThemeData(
         fontFamily: 'Montserrat',
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: {
-        MainPage.id: (context) => MainPage()
+        MainPage.id: (context) => MainPage(),
+        SplashPage.id: (context) => SplashPage()
       },
-      initialRoute: MainPage.id,
+      initialRoute: SplashPage.id,
     );
   }
 }
